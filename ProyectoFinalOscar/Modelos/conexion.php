@@ -19,8 +19,6 @@ abstract class Conexion extends PDO
 	protected function realizarConexion()
 	{
 		// http://php.net/manual/es/language.exceptions.php
-
-
 			parent::__construct("pgsql:host={$this->host} ;dbname={$this->bd} ;port={$this->port}", $this->user, $this->password, $this->options);//ejecutamos la conexion // parent::__construct se utiliza los metodo y atributos de la clase o clases que extendemos/heredamos
 		try {
 			$this->respuestaConexion = true; //asignamos true al atributo
